@@ -36,7 +36,7 @@ export default {
 				this.items = response.data;
 			})
 			.catch(err => {
-				console.error(err);
+				this.$handler.get(err);
 			});
 	},
 };
