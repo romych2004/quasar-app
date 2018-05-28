@@ -1,6 +1,6 @@
 // import something here
 
-const errorHandler = function(app, router, Vue) {
+const handler = function(app, router, Vue) {
 	this.get = (err) => {
 		console.error(err);
 	}
@@ -12,5 +12,5 @@ const errorHandler = function(app, router, Vue) {
 
 // leave the export, even if you don't use it
 export default ({app, router, Vue}) => {
-	Vue.prototype.$handler = new errorHandler(app, router, Vue);
+	Vue.prototype.$handler = new handler(app, router, Vue);
 };
